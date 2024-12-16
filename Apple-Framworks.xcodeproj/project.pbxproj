@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		05FBDCA52D0DBD3500C8D496 /* Apple_FramworksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDCA42D0DBD3500C8D496 /* Apple_FramworksApp.swift */; };
-		05FBDCA72D0DBD3500C8D496 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDCA62D0DBD3500C8D496 /* ContentView.swift */; };
 		05FBDCA92D0DBD3800C8D496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FBDCA82D0DBD3800C8D496 /* Assets.xcassets */; };
 		05FBDCAC2D0DBD3800C8D496 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FBDCAB2D0DBD3800C8D496 /* Preview Assets.xcassets */; };
 		05FBDCB32D0DC85300C8D496 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDCB22D0DC85300C8D496 /* Framework.swift */; };
+		05FBDCB52D0DCFCD00C8D496 /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDCB42D0DCFCD00C8D496 /* FrameworkGridView.swift */; };
+		05FBDCB72D0DD02400C8D496 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDCB62D0DD02400C8D496 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05FBDCA12D0DBD3500C8D496 /* Apple-Framworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-Framworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBDCA42D0DBD3500C8D496 /* Apple_FramworksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_FramworksApp.swift; sourceTree = "<group>"; };
-		05FBDCA62D0DBD3500C8D496 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05FBDCA82D0DBD3800C8D496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05FBDCAB2D0DBD3800C8D496 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05FBDCB22D0DC85300C8D496 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
+		05FBDCB42D0DCFCD00C8D496 /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
+		05FBDCB62D0DD02400C8D496 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,9 @@
 		05FBDCA32D0DBD3500C8D496 /* Apple-Framworks */ = {
 			isa = PBXGroup;
 			children = (
+				05FBDCB62D0DD02400C8D496 /* ContentView.swift */,
+				05FBDCB42D0DCFCD00C8D496 /* FrameworkGridView.swift */,
 				05FBDCA42D0DBD3500C8D496 /* Apple_FramworksApp.swift */,
-				05FBDCA62D0DBD3500C8D496 /* ContentView.swift */,
 				05FBDCA82D0DBD3800C8D496 /* Assets.xcassets */,
 				05FBDCAA2D0DBD3800C8D496 /* Preview Content */,
 			);
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05FBDCA72D0DBD3500C8D496 /* ContentView.swift in Sources */,
+				05FBDCB52D0DCFCD00C8D496 /* FrameworkGridView.swift in Sources */,
 				05FBDCB32D0DC85300C8D496 /* Framework.swift in Sources */,
+				05FBDCB72D0DD02400C8D496 /* ContentView.swift in Sources */,
 				05FBDCA52D0DBD3500C8D496 /* Apple_FramworksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
