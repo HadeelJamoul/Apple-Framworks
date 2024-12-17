@@ -13,41 +13,45 @@ struct FrameworkGridView: View {
         let coulmns: [GridItem] = [
             GridItem(.flexible()),
             GridItem(.flexible()),
-            GridItem(.flexible())]
+            GridItem(.flexible()),
+        ]
         
-        
-        LazyVGrid(columns: coulmns, content: {
-            FrameworkTitleView(imageName: "app-clip", name: "App Clips")
-            FrameworkTitleView(imageName: "app-clip", name: "App Clips")
-            FrameworkTitleView(imageName: "app-clip", name: "App Clips")
-            FrameworkTitleView(imageName: "app-clip", name: "App Clips")
-            FrameworkTitleView(imageName: "app-clip", name: "App Clips")
-            FrameworkTitleView(imageName: "app-clip", name: "App Clips")
-
-        })
+            NavigationView {
+                ScrollView {
+                    LazyVGrid(columns: coulmns) {
+                        // we already included the id in the Framework struct so there is no need to pass it here like this id: \.id
+                        
+                        //framework the name of each item in the frameworks
+                        ForEach(MockData.frameworks){
+                            framework in FrameworkTitleView(framework: framework)
+                        }
+                    }
+                }
+                .navigationTitle("🍎 Frameworks")
+        }
     }
 }
 
 
 struct FrameworkTitleView : View {
     
-    let imageName: String
-    let name: String
+    let framework: Framework
     
     var body: some View{
         VStack(){
-            Image(imageName)
+            Image(framework.imageName)
                 .resizable()
                 .frame(width: 100 , height: 100)
 
-            Text(name)
+            Text(framework.name)
                 .font(.title2)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.white)
+                // .foregroundColor(.white)
                 // shrink the text if needed to 50 %
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
         }
+        .padding()
     }
 }
 

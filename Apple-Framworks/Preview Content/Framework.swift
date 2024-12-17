@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Framework{
+// we used Hashable to specifc each item of the data list
+// we used Identifiable so we can add unike id for each item
+
+struct Framework : Hashable , Identifiable{
+    // Universally unique identifier
+    let id = UUID()
     let name: String
     let imageName: String
     let urlString: String
