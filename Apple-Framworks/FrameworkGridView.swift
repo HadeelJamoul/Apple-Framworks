@@ -1,13 +1,16 @@
-//
-//  FrameworkGridView.swift
-//  Apple-Framworks
-//
-//  Created by Hadeel Jamoul on 14/12/2024.
-//
+
+// the views always rerender fall and rebuild again
+// the state stay persistent
+// imagine if the state build and rerender as the view so it will be nil in some cases
+// Freamwork?
 
 import SwiftUI
 
 struct FrameworkGridView: View {
+    
+    //when you initilize a bran new view model we use state
+    @StateObject var viewModel: FrameworkGridViewModel = FrameworkGridViewModel()
+
     var body: some View {
         
         let coulmns: [GridItem] = [
@@ -15,6 +18,9 @@ struct FrameworkGridView: View {
             GridItem(.flexible()),
             GridItem(.flexible()),
         ]
+        
+// we gonna use onTapGesture to update our sourth of truth (data)
+// what we need to update is the framework that we selected
         
             NavigationView {
                 ScrollView {
@@ -24,10 +30,18 @@ struct FrameworkGridView: View {
                         //framework the name of each item in the frameworks
                         ForEach(MockData.frameworks){
                             framework in FrameworkTitleView(framework: framework)
+                                .onTapGesture {
+                                    viewModel.selectedFramework = framework
+                                }
                         }
                     }
                 }
                 .navigationTitle("🍎 Frameworks")
+                .sheet(isPresented: $viewModel.isShowingDetailView) {
+                    FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.defaultFramwork,
+                                        isShowingFrameworkDetailView: $viewModel.isShowingDetailView
+                    )
+                }
         }
     }
 }

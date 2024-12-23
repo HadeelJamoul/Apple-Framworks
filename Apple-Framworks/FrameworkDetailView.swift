@@ -11,6 +11,8 @@ struct FrameworkDetailView: View {
     
     var framework: Framework
     
+    @Binding var isShowingFrameworkDetailView: Bool
+    
     var body: some View {
         VStack{
             
@@ -19,7 +21,7 @@ struct FrameworkDetailView: View {
                 Spacer()
                 
                 Button{
-                    
+                    isShowingFrameworkDetailView = false
                 } label: {
                     Image(systemName: "xmark")
                         .foregroundColor(Color(.label))
@@ -29,7 +31,7 @@ struct FrameworkDetailView: View {
                 }.padding()
             }
             
-            
+             
             Spacer()
             
             FrameworkTitleView(framework: framework)
@@ -52,7 +54,7 @@ struct FrameworkDetailView: View {
     
 struct FrameworkDetailView_preview: PreviewProvider{
         static var previews: some View {
-            FrameworkDetailView(framework: MockData.sampleFramework)
+            FrameworkDetailView(framework: MockData.sampleFramework , isShowingFrameworkDetailView: .constant(false))
     }
 }
 
