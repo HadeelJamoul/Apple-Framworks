@@ -12,9 +12,10 @@ struct FrameworkDetailView: View {
     var framework: Framework
     
     @Binding var isShowingFrameworkDetailView: Bool
+    @State private var isShowingSafariView: Bool = false
     
     var body: some View {
-        VStack{
+        VStack {
             
             HStack{
                 
@@ -43,11 +44,13 @@ struct FrameworkDetailView: View {
             Spacer()
             
             Button {
-                
+                isShowingSafariView = true
             } label: {
                 AFButton(title: "Learn More")
             }
-            
+        }
+        .fullScreenCover(isPresented: $isShowingSafariView) {
+            SafariView(url: URL(string: framework.urlString) ?? URL(string: MockData.defaultFramwork.urlString)!)
         }
     }
 }
