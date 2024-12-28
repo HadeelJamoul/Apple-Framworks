@@ -11,28 +11,16 @@ struct FrameworkDetailView: View {
     
     var framework: Framework
     
+    // Binding we use it when we need to pass a value throught levels
+    
     @Binding var isShowingFrameworkDetailView: Bool
     @State private var isShowingSafariView: Bool = false
     
     var body: some View {
         VStack {
             
-            HStack{
-                
-                Spacer()
-                
-                Button{
-                    isShowingFrameworkDetailView = false
-                } label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(Color(.label))
-                        .imageScale(.large)
-                    // we add this frame only if we press out the image we wont mess the x
-                        .frame(width: 44 , height: 44)
-                }.padding()
-            }
+             xButton(isShowXButton: $isShowingFrameworkDetailView)
             
-             
             Spacer()
             
             FrameworkTitleView(framework: framework)

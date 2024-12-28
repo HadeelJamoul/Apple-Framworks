@@ -9,6 +9,14 @@ import SwiftUI
 
 // true when we select a framework
 class FrameworkGridViewModel: ObservableObject{
+    
+    // grid view coulmns
+    let coulmns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
+    
     var selectedFramework: Framework? {
         didSet{
             isShowingDetailView = true
