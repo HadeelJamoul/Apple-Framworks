@@ -48,6 +48,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052474A02D201E80000C3CF5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				052474A22D201EAD000C3CF5 /* FrameworkGridView */,
+				052474A32D201F03000C3CF5 /* FrameworkDetailView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		052474A22D201EAD000C3CF5 /* FrameworkGridView */ = {
+			isa = PBXGroup;
+			children = (
+				05FBDCB42D0DCFCD00C8D496 /* FrameworkGridView.swift */,
+				0518B7A72D196246001B8EBF /* FrameworkGridViewModel.swift */,
+			);
+			path = FrameworkGridView;
+			sourceTree = "<group>";
+		};
+		052474A32D201F03000C3CF5 /* FrameworkDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				053D6B112D1438D800C9BBE7 /* FrameworkDetailView.swift */,
+			);
+			path = FrameworkDetailView;
+			sourceTree = "<group>";
+		};
+		052474A42D201F85000C3CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05FBDCB22D0DC85300C8D496 /* Framework.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		052474A52D20201B000C3CF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				052474A72D202062000C3CF5 /* Views */,
+				052474A62D20202C000C3CF5 /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		052474A62D20202C000C3CF5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				053D6B132D1449DC00C9BBE7 /* AFButton.swift */,
+				052F52D02D1F3B6900F55119 /* xButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		052474A72D202062000C3CF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0524749E2D20128C000C3CF5 /* FrameworkTitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		052474A82D2020D9000C3CF5 /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+				0570C6632D1AD34200EEF32F /* SafariView.swift */,
+			);
+			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
 		05FBDC982D0DBD3500C8D496 = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +135,14 @@
 		05FBDCA32D0DBD3500C8D496 /* Apple-Framworks */ = {
 			isa = PBXGroup;
 			children = (
-				053D6B112D1438D800C9BBE7 /* FrameworkDetailView.swift */,
-				0570C6632D1AD34200EEF32F /* SafariView.swift */,
+				052474A82D2020D9000C3CF5 /* UIKit Components */,
+				052474A52D20201B000C3CF5 /* Views */,
+				052474A42D201F85000C3CF5 /* Model */,
+				052474A02D201E80000C3CF5 /* Screens */,
 				05FBDCB62D0DD02400C8D496 /* ContentView.swift */,
-				05FBDCB42D0DCFCD00C8D496 /* FrameworkGridView.swift */,
 				05FBDCA42D0DBD3500C8D496 /* Apple_FramworksApp.swift */,
 				05FBDCA82D0DBD3800C8D496 /* Assets.xcassets */,
 				05FBDCAA2D0DBD3800C8D496 /* Preview Content */,
-				053D6B132D1449DC00C9BBE7 /* AFButton.swift */,
-				0518B7A72D196246001B8EBF /* FrameworkGridViewModel.swift */,
-				052F52D02D1F3B6900F55119 /* xButton.swift */,
-				0524749E2D20128C000C3CF5 /* FrameworkTitleView.swift */,
 			);
 			path = "Apple-Framworks";
 			sourceTree = "<group>";
@@ -85,7 +150,6 @@
 		05FBDCAA2D0DBD3800C8D496 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				05FBDCB22D0DC85300C8D496 /* Framework.swift */,
 				05FBDCAB2D0DBD3800C8D496 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
