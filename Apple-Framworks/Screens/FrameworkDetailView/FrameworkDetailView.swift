@@ -34,8 +34,14 @@ struct FrameworkDetailView: View {
             Button {
                 isShowingSafariView = true
             } label: {
-                AFButton(title: "Learn More")
+                // if i want to use my custome button
+                // AFButton(title: "Learn More")
+                Label("Learn More", systemImage: "book.fill")
             }
+            .buttonStyle(.bordered)
+            .tint(.red)
+            .controlSize(.large)
+            
         }
         .fullScreenCover(isPresented: $isShowingSafariView) {
             SafariView(url: URL(string: framework.urlString) ?? URL(string: MockData.defaultFramwork.urlString)!)
